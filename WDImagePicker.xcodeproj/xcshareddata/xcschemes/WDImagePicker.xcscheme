@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2A3C50D21CA0E2BC0039B18D"
-               BuildableName = "WDImagePicker.app"
+               BlueprintIdentifier = "2A3C50FA1CA0E3820039B18D"
+               BuildableName = "WDImagePicker.framework"
                BlueprintName = "WDImagePicker"
                ReferencedContainer = "container:WDImagePicker.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2A3C50E81CA0E2BD0039B18D"
+               BlueprintIdentifier = "2A3C51031CA0E3830039B18D"
                BuildableName = "WDImagePickerTests.xctest"
                BlueprintName = "WDImagePickerTests"
                ReferencedContainer = "container:WDImagePicker.xcodeproj">
@@ -42,8 +42,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2A3C50D21CA0E2BC0039B18D"
-            BuildableName = "WDImagePicker.app"
+            BlueprintIdentifier = "2A3C50FA1CA0E3820039B18D"
+            BuildableName = "WDImagePicker.framework"
             BlueprintName = "WDImagePicker"
             ReferencedContainer = "container:WDImagePicker.xcodeproj">
          </BuildableReference>
@@ -61,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2A3C50D21CA0E2BC0039B18D"
-            BuildableName = "WDImagePicker.app"
+            BlueprintIdentifier = "2A3C50FA1CA0E3820039B18D"
+            BuildableName = "WDImagePicker.framework"
             BlueprintName = "WDImagePicker"
             ReferencedContainer = "container:WDImagePicker.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2A3C50D21CA0E2BC0039B18D"
-            BuildableName = "WDImagePicker.app"
+            BlueprintIdentifier = "2A3C50FA1CA0E3820039B18D"
+            BuildableName = "WDImagePicker.framework"
             BlueprintName = "WDImagePicker"
             ReferencedContainer = "container:WDImagePicker.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
