@@ -144,7 +144,7 @@ internal class WDImageCropView: UIView, UIScrollViewDelegate {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        var size = self.cropSize;
+        let size = self.cropSize;
         let toolbarSize = CGFloat(UIDevice.currentDevice().userInterfaceIdiom == .Pad ? 0 : 54)
         self.xOffset = floor((CGRectGetWidth(self.bounds) - size.width) * 0.5)
         self.yOffset = floor((CGRectGetHeight(self.bounds) - toolbarSize - size.height) * 0.5)
@@ -187,11 +187,10 @@ internal class WDImageCropView: UIView, UIScrollViewDelegate {
         visibleRect = CGRectApplyAffineTransform(visibleRect, rectTransform);
 
         // finally crop image
-        let imageRef = CGImageCreateWithImageInRect(imageToCrop!.CGImage, visibleRect)
-        let result = UIImage(CGImage: imageRef, scale: imageToCrop!.scale,
-            orientation: imageToCrop!.imageOrientation)
+        let imageRef = CGImageCreateWithImageInRect(imageToCrop!.CGImage, visibleRect)!
+        let result = UIImage(CGImage: imageRef, scale: imageToCrop!.scale, orientation: imageToCrop!.imageOrientation)
 
-        return result!
+        return result
     }
 
     private func calcVisibleRectForResizeableCropArea() -> CGRect {

@@ -107,8 +107,7 @@ internal class WDImageCropViewController: UIViewController {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let gradient = CGGradientCreateWithColorComponents(colorSpace, components, nil, 2)
 
-        CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, 54),
-            .allZeros)
+        CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, 54), .DrawsAfterEndLocation)
 
         let viewImage = UIGraphicsGetImageFromCurrentImageContext()
 

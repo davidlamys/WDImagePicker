@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "764FD5801B8F01C100BE5F46"
+               BlueprintIdentifier = "2A3C50D21CA0E2BC0039B18D"
                BuildableName = "WDImagePicker.app"
                BlueprintName = "WDImagePicker"
                ReferencedContainer = "container:WDImagePicker.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "764FD5951B8F01C100BE5F46"
+               BlueprintIdentifier = "2A3C50E81CA0E2BD0039B18D"
                BuildableName = "WDImagePickerTests.xctest"
                BlueprintName = "WDImagePickerTests"
                ReferencedContainer = "container:WDImagePicker.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "764FD5801B8F01C100BE5F46"
+            BlueprintIdentifier = "2A3C50D21CA0E2BC0039B18D"
             BuildableName = "WDImagePicker.app"
             BlueprintName = "WDImagePicker"
             ReferencedContainer = "container:WDImagePicker.xcodeproj">
@@ -65,7 +65,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "764FD5801B8F01C100BE5F46"
+            BlueprintIdentifier = "2A3C50D21CA0E2BC0039B18D"
             BuildableName = "WDImagePicker.app"
             BlueprintName = "WDImagePicker"
             ReferencedContainer = "container:WDImagePicker.xcodeproj">
@@ -84,7 +84,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "764FD5801B8F01C100BE5F46"
+            BlueprintIdentifier = "2A3C50D21CA0E2BC0039B18D"
             BuildableName = "WDImagePicker.app"
             BlueprintName = "WDImagePicker"
             ReferencedContainer = "container:WDImagePicker.xcodeproj">
