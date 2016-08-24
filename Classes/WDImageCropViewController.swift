@@ -65,7 +65,7 @@ internal class WDImageCropViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel,
             target: self, action: "actionCancel:")
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Use", style: .Plain,
-            target: self, action: "actionUse:")
+            target: self, action: #selector(WDImageCropViewController.actionUse(_:)))
     }
 
     private func setupCropView() {
@@ -84,7 +84,7 @@ internal class WDImageCropViewController: UIViewController {
         self.cancelButton.setTitle("Cancel", forState: .Normal)
         self.cancelButton.setTitleShadowColor(
             UIColor(red: 0.118, green: 0.247, blue: 0.455, alpha: 1), forState: .Normal)
-        self.cancelButton.addTarget(self, action: "actionCancel:", forControlEvents: .TouchUpInside)
+        self.cancelButton.addTarget(self, action: #selector(WDImageCropViewController.actionCancel(_:)), forControlEvents: .TouchUpInside)
     }
 
     private func setupUseButton() {
@@ -95,7 +95,7 @@ internal class WDImageCropViewController: UIViewController {
         self.useButton.setTitle("Use", forState: .Normal)
         self.useButton.setTitleShadowColor(
             UIColor(red: 0.118, green: 0.247, blue: 0.455, alpha: 1), forState: .Normal)
-        self.useButton.addTarget(self, action: "actionUse:", forControlEvents: .TouchUpInside)
+        self.useButton.addTarget(self, action: #selector(WDImageCropViewController.actionUse(_:)), forControlEvents: .TouchUpInside)
     }
 
     private func toolbarBackgroundImage() -> UIImage {

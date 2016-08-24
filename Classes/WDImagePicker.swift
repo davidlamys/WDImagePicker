@@ -6,10 +6,11 @@
 //  Copyright (c) 2015 Wu Di. All rights reserved.
 //
 
+import Photos
 import UIKit
 
 @objc public protocol WDImagePickerDelegate {
-    optional func imagePicker(imagePicker: WDImagePicker, pickedImage: UIImage)
+    optional func imagePicker(imagePicker: WDImagePicker, pickedImage: UIImage, imageAsset:PHAsset?)
     optional func imagePickerDidCancel(imagePicker: WDImagePicker)
 }
 
@@ -17,26 +18,28 @@ import UIKit
     public var delegate: WDImagePickerDelegate?
     public var cropSize: CGSize!
     public var resizableCropArea = false
-
+    
+    
     private var _imagePickerController: UIImagePickerController!
-
+    private var imageAsset:PHAsset!
+    
     public var imagePickerController: UIImagePickerController {
         return _imagePickerController
     }
     
     override public init() {
         super.init()
-
+        
         self.cropSize = CGSizeMake(320, 320)
         _imagePickerController = UIImagePickerController()
         _imagePickerController.delegate = self
         _imagePickerController.sourceType = .PhotoLibrary
     }
-
+    
     private func hideController() {
         self._imagePickerController.dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     public func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         if self.delegate?.imagePickerDidCancel != nil {
             self.delegate?.imagePickerDidCancel!(self)
@@ -44,17 +47,23 @@ import UIKit
             self.hideController()
         }
     }
-
+    
     public func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let cropController = WDImageCropViewController()
         cropController.sourceImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        PHAsset.fetchAssetsWithALAssetURLs([info[UIImagePickerControllerReferenceURL] as! NSURL], options: nil).enumerateObjectsWithOptions(.Concurrent) { (result, index, stop) in
+            NSLog("result: \(result) - \(index)")
+            self.imageAsset = result as! PHAsset
+        }
+        
         cropController.resizableCropArea = self.resizableCropArea
         cropController.cropSize = self.cropSize
         cropController.delegate = self
         picker.pushViewController(cropController, animated: true)
     }
-
+    
     func imageCropController(imageCropController: WDImageCropViewController, didFinishWithCroppedImage croppedImage: UIImage) {
-        self.delegate?.imagePicker?(self, pickedImage: croppedImage)
+        self.delegate?.imagePicker?(self, pickedImage: croppedImage, imageAsset: imageAsset)
     }
 }
