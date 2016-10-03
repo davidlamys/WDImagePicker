@@ -48,7 +48,7 @@ public class WDImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigat
         self.delegate?.imagePickerDidCancel(self)
     }
     
-    @nonobjc public func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let cropController = WDImageCropViewController()
         cropController.sourceImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
